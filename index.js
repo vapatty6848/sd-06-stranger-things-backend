@@ -1,25 +1,31 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-const cors = require('cors')
+const cors = require('cors');
 
-const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json')
-const StrangerThingsRepository = require('./data/repository/StrangerThings')
-const StrangerThingsService = require('./services/StrangerThings')
+const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
+const StrangerThingsRepository = require('./data/repository/StrangerThings');
+const StrangerThingsService = require('./services/StrangerThings');
 
-const strangerThingsRepository = new StrangerThingsRepository(strangerThingsDataset)
-const strangerThingsService = new StrangerThingsService(strangerThingsRepository)
+const strangerThingsRepository = new StrangerThingsRepository(
+  strangerThingsDataset
+);
+const strangerThingsService = new StrangerThingsService(
+  strangerThingsRepository
+);
 
-app.use(cors())
+app.use(cors());
 
-const hereIsTheUpsideDown = true
+const hereIsTheUpsideDown = true;
 
 app.get('/', (req, res) => {
-  const characters = strangerThingsService.search(req.query, hereIsTheUpsideDown)
+  const characters = strangerThingsService.search(
+    req.query,
+    hereIsTheUpsideDown
+  );
 
-  res.status(200)
-    .json(characters)
-})
+  res.status(200).json(characters);
+});
 
-app.listen(3000)
-console.log('Escutando na porta 3000')
+app.listen(3000);
+console.log('Escutando na porta 3000');
