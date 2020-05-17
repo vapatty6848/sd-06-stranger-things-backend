@@ -1,11 +1,11 @@
 const express = require('express');
-const app = express();
-
 const cors = require('cors');
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
 const StrangerThingsService = require('./services/StrangerThings');
+
+const app = express();
 
 const strangerThingsRepository = new StrangerThingsRepository(
   strangerThingsDataset
@@ -27,5 +27,6 @@ app.get('/', (req, res) => {
   res.status(200).json(characters);
 });
 
-app.listen(3000);
-console.log('Escutando na porta 3000');
+app.listen(3000, () => {
+  console.log('Escutando na porta 3000');
+});
