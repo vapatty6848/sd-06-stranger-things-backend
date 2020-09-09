@@ -3,15 +3,19 @@ const flipout = require('flipout');
 const data = require('../data/dataset/stranger-things-characters.json');
 require('dotenv').config();
 
+const HAWKINS_URL = `https://${process.env.GITHUB_USER}-hawkins-back.herokuapp.com/`
+const UPSIDEDOWN_URL = `https://${process.env.GITHUB_USER}-upside-down-back.herokuapp.com/`
+
+
 const flipData = data.map(({ name, origin, status }) => ({
   name: flipout(name),
   origin: flipout(origin),
   status: flipout(status),
 }));
-describe('6 - Verifica se a API esta funcional no heroku', () => {
-  it('Verifica se uma chamada para o endpoint hawkins funciona', async () => {
+describe('Verifica o Deploy no Heroku', () => {
+  it('Verifica se ao fazer uma requisição do tipo GET para o endpoint da api Hawkins serão retornadas as informações corretas.', async () => {
     await frisby
-      .get(process.env.HAWKINS_URL)
+      .get(HAWKINS_URL)
       .expect('status', 200)
       .then((response) => {
         const { body } = response;
@@ -21,9 +25,10 @@ describe('6 - Verifica se a API esta funcional no heroku', () => {
       });
   });
 
-  it('Verifica se uma chamada para o endpoint upsideDown funciona', async () => {
+  it('Verifica se ao fazer uma requisição do tipo GET para o endpoint da api upsideDown serão retornadas as informações corretas',
+   async () => {
     await frisby
-      .get(process.env.UPSIDEDOWN_URL)
+      .get(UPSIDEDOWN_URL)
       .expect('status', 200)
       .then((response) => {
         const { body } = response;
