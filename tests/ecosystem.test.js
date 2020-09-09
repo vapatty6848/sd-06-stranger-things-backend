@@ -5,7 +5,6 @@ describe('Verifica a configuração do ecosystem.config.yml', () => {
   const ecosystem = yml.safeLoad(fs.readFileSync('ecosystem.config.yml', 'utf8'));
   const config = ecosystem.apps[0];
 
-
   it('Será validado que o ecosystem tem a propriedade name', () => {
     expect(config).toHaveProperty('name');
   });
@@ -14,7 +13,7 @@ describe('Verifica a configuração do ecosystem.config.yml', () => {
     expect(config).toHaveProperty('script');
     expect(config.script).toEqual('./index.js');
   });
-    
+
   it('Será validado que o modo de execução está configurado para cluster', () => {
     expect(config).toHaveProperty('exec_mode');
     expect(config.exec_mode).toEqual('cluster');

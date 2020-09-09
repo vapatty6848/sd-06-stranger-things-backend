@@ -4,7 +4,6 @@ describe('Verifica as variáveis de ambiente', () => {
   const apiPort = process.env.PORT;
   const updasideMode = process.env.UPSIDEDOWN_MODE;
 
-  
   it('Será validado que a variável da PORT existe', () => {
     expect(apiPort).toBeDefined();
   });
