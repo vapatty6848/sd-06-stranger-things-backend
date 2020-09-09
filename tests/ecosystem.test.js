@@ -5,10 +5,10 @@ describe('Verifica a configuração do ecosystem.config.yml', () => {
   const ecosystem = yml.safeLoad(fs.readFileSync('ecosystem.config.yml', 'utf8'));
   const config = ecosystem.apps[0];
 
+
   it('Será validado que o ecosystem tem a propriedade name', () => {
     expect(config).toHaveProperty('name');
   });
-
 
   it('Será validado se o script a ser executado é o index.js', () => {
     expect(config).toHaveProperty('script');
@@ -25,7 +25,7 @@ describe('Verifica a configuração do ecosystem.config.yml', () => {
     expect(config.instances).toEqual(2);
   });
 
-  it('Será validado que o modo watch esta configurado para estar desativado.', () => {
+  it('Será validado que o modo watch está configurado para estar desativado.', () => {
     expect(config.watch).not.toBeTruthy();
   });
 
