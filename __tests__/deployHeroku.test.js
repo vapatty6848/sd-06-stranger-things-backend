@@ -13,7 +13,7 @@ const flipData = data.map(({ name, origin, status }) => ({
   status: flipout(status),
 }));
 describe('Verifica o Deploy no Heroku', () => {
-  it('Verifica se ao fazer uma requisição do tipo GET para o endpoint da api Hawkins serão retornadas as informações corretas.', async () => {
+  it('Será validado que ao fazer uma requisição do tipo GET para o endpoint da api Hawkins serão retornadas as informações corretas.', async () => {
     await frisby
       .get(HAWKINS_URL)
       .expect('status', 200)
@@ -25,7 +25,7 @@ describe('Verifica o Deploy no Heroku', () => {
       });
   });
 
-  it('Verifica se ao fazer uma requisição do tipo GET para o endpoint da api upsideDown serão retornadas as informações corretas',
+  it('Será validado que ao fazer uma requisição do tipo GET para o endpoint da api upsideDown serão retornadas as informações corretas',
    async () => {
     await frisby
       .get(UPSIDEDOWN_URL)

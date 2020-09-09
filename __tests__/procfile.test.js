@@ -3,10 +3,10 @@ const fs = require('fs');
 describe('Verifica se a configuração do arquivo Procfile.', () => {
   const [type, script] = fs.readFileSync('Procfile', 'utf8').split(':');
 
-  it('Verifica se o dyno é do tipo web.', () => {
+  it('Será validado que o dyno é do tipo web.', () => {
     expect(type).toEqual('web');
   });
-  it('Verifica se o script inicia o server com pm2 e se usa o ecosystem.', () => {
+  it('Será validado que o script inicia o server com pm2 e se usa o ecosystem.', () => {
     const scriptParts = script.trim().split(' ');
     expect(scriptParts[0]).toMatch(/^pm2$|^pm2-/);
     expect(scriptParts).toContain('start');
