@@ -6,18 +6,4 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 
   - Adicione os comandos utilizados, de maneira sequencial, ao README do backend.
 
-**Nota**: Este direcionamento está presente no [repositório](https://github.com/tryber/sd-01-block31-stranger-things) em que os requisitos do projeto são destrinchados.
-
-## Requisitos
-
-### 6 - Deploy Heroku
-
-Para realizar o deploy do meu backend, fiz o seguinte procedimento:
-
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
-
-### 7 - Monitoramento
-
-Para conseguir realizar o monitoramento da minha API, fiz o seguinte procedimento:
-
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+**Nota**: Este direcionamento está presente no [repositório](https://github.com/betrybe/sd-0x-stranger-things) em que os requisitos do projeto são destrinchados.
