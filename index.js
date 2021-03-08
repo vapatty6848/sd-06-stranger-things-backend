@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 
-const PORT = process.env.PORT;
+const { PORT } = process.env;
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
@@ -18,12 +18,12 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-const UPSIDEDOWM_MODE = process.env.UPSIDEDOWM_MODE === 'true';
+const { UPSIDEDOWN_MODE } = process.env.UPSIDEDOWN_MODE === 'true';
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
-    hereIsTheUpsideDown,
+    UPSIDEDOWN_MODE,
   );
 
   res.status(200).json(characters);
