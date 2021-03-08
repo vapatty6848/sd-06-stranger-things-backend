@@ -8,6 +8,7 @@ const StrangerThingsService = require('./services/StrangerThings');
 
 const app = express();
 const PORT = parseInt(process.env.PORT, 10) || 3000;
+
 const strangerThingsRepository = new StrangerThingsRepository(
   strangerThingsDataset,
 );
