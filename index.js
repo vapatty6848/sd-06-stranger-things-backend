@@ -27,6 +27,8 @@ app.get('/', (req, res) => {
   res.status(200).json(characters);
 });
 
-app.listen(3000, () => {
-  console.log('Escutando na porta 3000');
+const PORT = process.env.PORT || 3001;
+
+app.listen(3001, () => {
+  console.log('Escutando na porta 3001');
 });
