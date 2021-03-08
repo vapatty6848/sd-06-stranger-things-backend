@@ -1,0 +1,4 @@
+RUN npm install pm2 -g
+PM2_PUBLIC_KEY=so6pso7qqsfdahn PM2_SECRET_KEY=w3bqc4qfddcvpl3
+
+CMD ["pm2-runtime", "app.js"]
