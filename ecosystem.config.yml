@@ -5,7 +5,7 @@ apps:
     exec_mode: cluster
     instances: 2
     max_memory_restart: '200M'
-  - 
+
     name: cristianonunes-bd
     script: ./index.js
     watch: false
