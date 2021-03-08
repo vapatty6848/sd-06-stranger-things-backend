@@ -3,6 +3,7 @@ const yml = require('js-yaml');
 
 describe('Verifica a configuração do ecosystem.config.yml', () => {
   const ecosystem = yml.safeLoad(fs.readFileSync('ecosystem.config.yml', 'utf8'));
+  console.log(ecosystem.apps[0])
   const config = ecosystem.apps[0];
 
   it('Será validado que o ecosystem tem a propriedade name', () => {
