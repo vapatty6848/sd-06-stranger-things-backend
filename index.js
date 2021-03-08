@@ -6,6 +6,7 @@ const StrangerThingsRepository = require('./data/repository/StrangerThings');
 const StrangerThingsService = require('./services/StrangerThings');
 
 const app = express();
+// iniciando projeto
 
 const strangerThingsRepository = new StrangerThingsRepository(
   strangerThingsDataset,
