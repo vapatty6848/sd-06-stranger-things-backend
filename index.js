@@ -23,7 +23,7 @@ const hereIsTheUpsideDown = process.env.UPSIDEDOWM_MODE === 'true';
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
-    UPSIDEDOWM_MODE,
+    hereIsTheUpsideDown,
   );
 
   res.status(200).json(characters);
