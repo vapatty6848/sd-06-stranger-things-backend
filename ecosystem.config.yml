@@ -1,8 +1,14 @@
 apps:
-
-- name: app
-  script: ./index.js
-  max_memory_restart: 200M
-  exec_mode: cluster
-  instances: 2
-  watch: false
+  - name: cristianonunes-bk
+    script: ./index.js
+    watch: false
+    exec_mode: cluster
+    instances: 2
+    max_memory_restart: '200M'
+  - 
+    name: cristianonunes-bd
+    script: ./index.js
+    watch: false
+    exec_mode: cluster
+    instances: 2
+    max_memory_restart: '200M'
