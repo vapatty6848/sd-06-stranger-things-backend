@@ -9,4 +9,3 @@ apps:
     PORT: 3000
     UPSIDEDOWN_MODE: true
     GITHUB_USER: marianoelsztain
-    NODE_ENV: development
