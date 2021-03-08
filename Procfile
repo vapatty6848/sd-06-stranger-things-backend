@@ -1,1 +1,1 @@
-web: pm2 start ecosystem.config.yml --only name
+web: pm2 start ecosystem.config.yml
