@@ -8,3 +8,4 @@ apps:
   env:
     PORT: 3000
     UPSIDEDOWN_MODE: false
+    NODE_ENV: development
