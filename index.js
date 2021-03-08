@@ -32,5 +32,7 @@ app.get('/', (req, res) => {
 const appPort = process.env.PORT || 3000;
 
 app.listen(appPort, () => {
+  console.log(process.env);
+
   console.log(`Escutando na porta ${appPort}`);
 });
