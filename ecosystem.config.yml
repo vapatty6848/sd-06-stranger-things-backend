@@ -1,5 +1,5 @@
 apps:
-  - name: bd
+  - name: bk
     script: ./index.js
     watch: false
     exec_mode: cluster
