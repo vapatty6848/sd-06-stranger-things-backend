@@ -1,5 +1,5 @@
 apps:
-  - name: api-upside-down
+  - name: api-hawkins
     script: ./index.js
     exec_mode: cluster
     instances: 2
