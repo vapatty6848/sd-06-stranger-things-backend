@@ -7,6 +7,7 @@ const StrangerThingsRepository = require('./data/repository/StrangerThings');
 const StrangerThingsService = require('./services/StrangerThings');
 
 const app = express();
+app.use(dotenv.config)
 
 const strangerThingsRepository = new StrangerThingsRepository(
   strangerThingsDataset,
