@@ -1,4 +1,4 @@
-app:
+apps:
   - name: StrangerThings
     script: ./index.js
     max_memory_restart: 200M
