@@ -1,6 +1,6 @@
 apps:
   - script   : ./index.js
-    name     : 'stranger-things-backend'
+    name     : stranger-things-backend
     watch  : false
     instances: 2
     exec_mode: cluster
