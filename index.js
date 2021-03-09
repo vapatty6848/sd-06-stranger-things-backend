@@ -30,5 +30,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
-  console.log('Escutando na porta 3003');
+  console.log('Escutando na porta 3000');
 });
