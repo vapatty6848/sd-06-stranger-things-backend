@@ -17,7 +17,7 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-// Usando o modo upside down
+// Usando o modo hawkins
 const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === false;
 
 app.get('/', (req, res) => {
