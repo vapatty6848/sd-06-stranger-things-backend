@@ -1,5 +1,6 @@
 apps:
-  - script: ./index.js
+  - name: bd
+    script: ./index.js
     watch: false
     exec_mode: cluster
     instances: 2
