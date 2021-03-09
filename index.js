@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-// teste dotenv
+
 const { PORT } = process.env;
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
