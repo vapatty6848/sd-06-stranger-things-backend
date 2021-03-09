@@ -6,5 +6,5 @@ apps:
   instances: 2
   max_memory_restart: 200M
   env:
-    UPSIDEDOWN_MODE: false
+    UPSIDEDOWN_MODE: true
     GITHUB_USER: marianoelsztain
