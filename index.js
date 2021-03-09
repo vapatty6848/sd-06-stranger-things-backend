@@ -18,7 +18,7 @@ const strangerThingsService = new StrangerThingsService(
 app.use(cors());
 // Gargani no slack: https://trybecourse.slack.com/archives/C016CCMKN9E/p1615241356315900?thread_ts=1615234819.284300&cid=C016CCMKN9E
 const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === 'true';
-
+console.log(hereIsTheUpsideDown);
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
