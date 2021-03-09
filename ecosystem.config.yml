@@ -1,3 +1,6 @@
 app:
   - name: StrangerThings
     script: ./index.js
+    max_memory_restart: 200M
+    exec_mode: cluster
+    instances: 2
