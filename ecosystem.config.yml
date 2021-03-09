@@ -7,5 +7,5 @@ apps:
   max_memory_restart: 200M
   env:
     PORT: 3000
-    UPSIDEDOWN_MODE: true
+    UPSIDEDOWN_MODE: false
     GITHUB_USER: marianoelsztain
