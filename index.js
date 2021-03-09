@@ -29,7 +29,7 @@ app.get('/', (request, response) => {
   response.status(200).json(characters);
 });
 
-const appPort = process.env.PORT || 3001;
+const appPort = process.env.PORT || 3000;
 
 app.listen(appPort, () => {
   console.log(process.env);
