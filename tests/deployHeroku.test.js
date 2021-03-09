@@ -12,7 +12,7 @@ const flipData = data.map(({ name, origin, status }) => ({
   status: flipout(status),
 }));
 
-describe.skip('Verifica o Deploy no Heroku', () => {
+describe('Verifica o Deploy no Heroku', () => {
   it('Será validado que ao fazer uma requisição do tipo GET para o endpoint da API Hawkins serão retornadas as informações corretas.', async () => {
     await frisby
       .get(HAWKINS_URL)
