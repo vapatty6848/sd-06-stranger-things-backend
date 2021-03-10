@@ -20,7 +20,7 @@ const strangerThingsService = new StrangerThingsService(
 app.use(cors());
 
 let hereIsTheUpsideDown;
-if (UPSIDEDOWN_MODE === false) {
+if (UPSIDEDOWN_MODE === 'false') {
   hereIsTheUpsideDown = false;
 } else {
   hereIsTheUpsideDown = true;
@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
     req.query,
     hereIsTheUpsideDown,
   );
-  console.log('upsidedown?', hereIsTheUpsideDown);
+  herokuconsole.log('upsidedown?', hereIsTheUpsideDown);
   res.status(200).json(characters);
 });
 
