@@ -31,7 +31,6 @@ app.get('/', (req, res) => {
     hereIsTheUpsideDown,
   );
   res.status(200).json(characters);
-  console.log('')
 });
 
 const port = process.env.PORT || 3000;
