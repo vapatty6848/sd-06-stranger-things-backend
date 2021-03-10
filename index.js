@@ -19,7 +19,12 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-const hereIsTheUpsideDown = UPSIDEDOWN_MODE === false ? false : true;
+let hereIsTheUpsideDown;
+if (UPSIDEDOWN_MODE === false) {
+  hereIsTheUpsideDown = false;
+} else {
+  hereIsTheUpsideDown = true;
+}
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
@@ -32,7 +37,7 @@ app.get('/', (req, res) => {
 
 app.listen(PORT || 3000, () => {
   console.log(`Escutando na porta ${PORT}`);
-  console.log(process.env.UPSIDEDOWN_MODE)
-  console.log(process.env.GITHUB_USER)
-  console.log(process.env.PORT)
+  console.log(process.env.UPSIDEDOWN_MODE);
+  console.log(process.env.GITHUB_USER);
+  console.log(process.env.PORT);
 });
