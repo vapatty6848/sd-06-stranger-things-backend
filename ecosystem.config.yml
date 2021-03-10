@@ -1,6 +1,6 @@
 apps:
 
-- name: api-upside-down
+- name: gui-alucard-bk
   script: ./index.js
   exec_mode: cluster
   instances: 2
