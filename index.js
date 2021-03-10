@@ -7,7 +7,8 @@ const StrangerThingsRepository = require('./data/repository/StrangerThings');
 const StrangerThingsService = require('./services/StrangerThings');
 
 const app = express();
-const { PORT } = process.env;
+const localPort = 3000;
+const PORT = process.env.PORT || localPort;
 
 const strangerThingsRepository = new StrangerThingsRepository(
   strangerThingsDataset,
