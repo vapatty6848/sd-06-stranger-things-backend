@@ -3,7 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
-const UPSIDEDOWN_MODE = process.env.UPSIDEDOWN_MODE;
+const { UPSIDEDOWN_MODE } = process.env;
 // utilizando valores default para o caso do arquivo de variaveis de ambiente não existir
 // ou faltar uma variavel de ambiente
 
