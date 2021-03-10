@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
     req.query,
     hereIsTheUpsideDown,
   );
-  herokuconsole.log('upsidedown?', hereIsTheUpsideDown);
+  console.log('upsidedown?', hereIsTheUpsideDown);
   res.status(200).json(characters);
 });
 
