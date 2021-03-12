@@ -27,10 +27,9 @@ app.get('/', (req, res) => {
     req.query,
     hereIsTheUpsideDown,
   );
-  res.status(200).json(hereIsTheUpsideDown);
-  // res.status(200).json(characters, hereIsTheUpsideDown);
+  res.status(200).json(characters);
 });
 
 app.listen(PORT, () => {
-  console.log(`Escutando na port ${PORT} env: ${process.env.UPSIDEDOWN_MODE}`);
+  console.log(`Escutando na port ${PORT}`);
 });
