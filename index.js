@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
     req.query,
     hereIsTheUpsideDown,
   );
-  res.status(200).json(characters);
+  res.status(200).json(characters, hereIsTheUpsideDown);
 });
 
 app.listen(PORT, () => {
