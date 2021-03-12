@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv/config');
+require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
 
@@ -32,5 +32,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Escutando na port ${PORT}`);
+  console.log(`Escutando na port ${PORT} env: ${process.env.UPSIDEDOWN_MODE}`);
 });
