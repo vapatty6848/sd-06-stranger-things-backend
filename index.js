@@ -25,7 +25,7 @@ app.get('/', async (req, res) => {
     req.query,
     hereIsTheUpsideDown,
   );
-  console.log(process.env.PORT)
+
   res.status(200).json(characters);
 });
 
