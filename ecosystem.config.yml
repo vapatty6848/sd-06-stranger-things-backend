@@ -5,3 +5,7 @@
       exec_mode: cluster
       instances: 2
       max_memory_restart: 200M
+      env_hawkins:
+        NODE_ENV: hawkins
+      env_upsideDown:
+        NODE_ENV: upsideDown
