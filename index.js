@@ -22,7 +22,7 @@ const PORT = process.env.PORT || LOCALHOST_PORT;
 
 const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === 'true';
 
-console.log('Upside mode: ', hereIsTheUpsideDown);
+console.log(`Upsidedown mode: {$hereIsTheUpsideDown}`);
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
