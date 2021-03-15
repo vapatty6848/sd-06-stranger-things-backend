@@ -34,3 +34,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log('Escutando na porta', PORT);
 });
+
+/* estava com erros no deploy dos apps e achei a solução nas threads abertas pela turma no slack. */
