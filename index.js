@@ -3,7 +3,9 @@ const cors = require('cors');
 
 require('dotenv').config();
 
-const { PORT } = process.env;
+// alteração da variável PORT com a ajuda e sugestão do Bruno Lemos:
+const LOCALHOST_PORT = 3000;
+const PORT = process.env.PORT || LOCALHOST_PORT;
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
@@ -20,19 +22,20 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE;
+const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === 'true';
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
     hereIsTheUpsideDown,
   );
+  console.log('aqui', hereIsTheUpsideDown)
 
   res.status(200).json(characters);
 });
 
 app.listen(PORT, () => {
-  console.log('Escutando na porta', PORT);
+  console.log('Escutando na porta', PORT, hereIsTheUpsideDown);
 });
 
 /* estava com erros no deploy dos apps e achei a solução nas threads abertas pela turma no slack. */
