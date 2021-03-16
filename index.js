@@ -22,6 +22,9 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
+/* Acho que finalmente o deploy será aceito. O problema era a comparação entre os valores
+recebidos que sempre eram considerados true por serem string. Agradecida pelas ajudas e pelas
+várias threads abertas no slack que falaram sobre isso */
 const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === 'true';
 
 app.get('/', (req, res) => {
