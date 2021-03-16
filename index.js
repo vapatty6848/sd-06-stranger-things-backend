@@ -32,13 +32,12 @@ app.get('/', (req, res) => {
     req.query,
     hereIsTheUpsideDown,
   );
-  console.log('aqui', hereIsTheUpsideDown)
 
   res.status(200).json(characters);
 });
 
 app.listen(PORT, () => {
-  console.log('Escutando na porta', PORT, hereIsTheUpsideDown);
+  console.log('Escutando na porta', PORT);
 });
 
 /* estava com erros no deploy dos apps e achei a solução nas threads abertas pela turma no slack. */
