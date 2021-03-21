@@ -1,0 +1,14 @@
+apps:
+
+- name: 'api-upside-down'
+  script: ./index.js
+  instances: 2
+  exec_mode: cluster
+  watch: false
+  max_memory_restart: '200M'
+  env_prod:
+    env: 'production'
+  env_stagging:
+    env: 'stagging'
+  env_homol:
+    env: 'homol'
