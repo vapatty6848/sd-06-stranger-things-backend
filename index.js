@@ -1,11 +1,11 @@
 const express = require('express');
 const cors = require('cors');
+const { port, upsidedownMode } = require('./config');
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
 const StrangerThingsService = require('./services/StrangerThings');
 
-const { port, upsidedownMode } = require('./config');
 const app = express();
 
 const strangerThingsRepository = new StrangerThingsRepository(
