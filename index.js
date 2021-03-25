@@ -18,7 +18,6 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-// converter para boolean
 const hereIsTheUpsideDown = Boolean(process.env.UPSIDEDOWN_MODE);
 
 app.get('/', (req, res) => {
