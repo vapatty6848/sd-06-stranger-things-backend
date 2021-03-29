@@ -1,6 +1,6 @@
 apps:
 
-- name: app-hawkins
+- name: app
   script: ./index.js
   exec_mode: cluster
   instances: 2
