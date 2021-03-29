@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotEnvConfig = require('dotenv').config;
 
+// ENV
 dotEnvConfig();
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
