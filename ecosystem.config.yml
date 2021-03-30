@@ -1,0 +1,3 @@
+Apps:
+  -name: App;
+  script: ./index.js;
