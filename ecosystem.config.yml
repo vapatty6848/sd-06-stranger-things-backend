@@ -2,5 +2,5 @@ apps:
   - name: App;
     script: ./index.js;
     exec_mode: cluster
-    instaces: 2
+    instances: 2
     max_memory_restar: 200M
