@@ -7,6 +7,7 @@ const strangerThingsDataset = require('./data/dataset/stranger-things-characters
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
 const StrangerThingsService = require('./services/StrangerThings');
 
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 const strangerThingsRepository = new StrangerThingsRepository(
@@ -29,6 +30,6 @@ app.get('/', (req, res) => {
   res.status(200).json(characters);
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Escutando na porta 3000');
 });
