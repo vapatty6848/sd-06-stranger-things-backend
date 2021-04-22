@@ -18,6 +18,8 @@ const strangerThingsService = new StrangerThingsService(
   strangerThingsRepository,
 );
 
+// comentário
+
 app.use(cors());
 
 const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE;
