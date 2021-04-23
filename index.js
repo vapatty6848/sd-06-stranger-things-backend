@@ -26,6 +26,7 @@ const hereIsTheUpsideDown = (string) => {
 };
 
 app.get('/', (req, res) => {
+  console.log('batatinha!');
   const characters = strangerThingsService.search(
     req.query,
     hereIsTheUpsideDown(UPSIDEDOWN_MODE),
