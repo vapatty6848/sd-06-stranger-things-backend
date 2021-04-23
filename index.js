@@ -10,12 +10,12 @@ const app = express();
 
 const { PORT, UPSIDEDOWN_MODE } = process.env;
 
-const strangerThingsService = new StrangerThingsService(
-  strangerThingsRepository,
-);
-
 const strangerThingsRepository = new StrangerThingsRepository(
   strangerThingsDataset,
+);
+
+const strangerThingsService = new StrangerThingsService(
+  strangerThingsRepository,
 );
 
 app.use(cors());
